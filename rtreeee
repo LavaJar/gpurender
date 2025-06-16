@@ -1,0 +1,30 @@
+import streamlit as st
+
+st.title("Hello, Streamlit!")
+
+# This creates a single-line text input box
+user_input_single_line = st.text_input("Enter some text here:", "Default text...")
+
+# Display what the user typed in the single-line box
+if user_input_single_line != "Default text..." and user_input_single_line != "":
+    st.write(f"You typed (single-line): {user_input_single_line}")
+
+st.write("---") # Separator for clarity
+
+# This creates a multi-line text input area
+user_input_multi_line = st.text_area("Enter longer text here:", "Start typing multiple lines...")
+
+# Display what the user typed in the multi-line box
+if user_input_multi_line != "Start typing multiple lines..." and user_input_multi_line != "":
+    st.write(f"You typed (multi-line):")
+    st.info(user_input_multi_line) # Displays in an info box
+
+st.write("---") # Another separator
+
+# Example of a number input
+user_number = st.number_input("Enter a number:", value=0, step=1)
+st.write(f"Your number is: {user_number}")
+
+# Example of a simple button
+if st.button("Click me!"):
+    st.success("Button was clicked!")
