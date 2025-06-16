@@ -1,5 +1,3 @@
-# gpurender
-import streamlit as st st.write("Hello, Streamlit!")
 import streamlit as st
 
 st.title("Talk to the App!")
